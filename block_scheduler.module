@@ -1,0 +1,26 @@
+<?php
+/**
+ * @file
+ * Adds a Datetime Visibility Condition to Backdrop.
+ */
+
+/**
+ * Implements hook_autoload_info().
+ */
+function block_scheduler_autoload_info() {
+  return array(
+    'DateTimeLayoutAccess' => 'date_time_layout_access.inc',
+  );
+}
+
+/**
+ * Implements hook_layout_access_info().
+ */
+function block_scheduler_layout_access_info() {
+  $info['date_time'] = array(
+    'title' => t('Date and time'),
+    'description' => t('Control access by the current date and time.'),
+    'class' => 'DateTimeLayoutAccess',
+  );
+  return $info;
+}

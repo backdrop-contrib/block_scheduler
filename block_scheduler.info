@@ -1,0 +1,5 @@
+name = Block Scheduler
+description = Adds a Datetime Visibility Condition
+
+backdrop = 1.x
+type = module
